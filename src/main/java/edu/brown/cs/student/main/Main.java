@@ -129,10 +129,10 @@ public final class Main {
       // use the MatchMaker.makeMatches method to get matches
       List<String> starList = MatchMaker.makeMatches(sun, moon, rising);
       // create an immutable map using the matches
-      Map<String, Object> immutableMap = ImmutableMap.of("matches", starList);
+      Map<String, Object> immutableMap = ImmutableMap.of("suggestions", starList);
       // return a json of the suggestions (HINT: use GSON.toJson())
       Gson GSON = new Gson();
-      String suggestions = GSON.toJson(starList);
+      String suggestions = GSON.toJson(immutableMap);
       return suggestions;
     }
   }
